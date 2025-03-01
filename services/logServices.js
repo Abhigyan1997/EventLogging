@@ -5,7 +5,7 @@ const createLog = async (logDatas) => {
   const lastLog = await Log.findOne().sort({ _id: -1 });
   const previousHash = lastLog ? lastLog.currentHash : null;
 
-  const newLog = {   
+  const newLog = {
     ...logDatas,
     previousHash,
     currentHash: generateHash({ ...logData, previousHash }),
