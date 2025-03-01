@@ -21,6 +21,8 @@ const getLogs = async (filters, pagination) => {
   const logs = await Log.find(filters).sort({ timestamp: -1 }).skip(skip).limit(limit);
   const totalCount = await Log.countDocuments(filters);
   return { logs, totalCount };
+  console.log(logs)
 };
+
 
 module.exports = { createLog, getLogs };
