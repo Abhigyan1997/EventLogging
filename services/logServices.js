@@ -24,5 +24,5 @@ const getLogs = async (filters, pagination) => {
   console.log(l)
 };
 
-
+//This is temporary chnage
 module.exports = { createLog, getLogs };
